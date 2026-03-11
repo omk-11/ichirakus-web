@@ -1,0 +1,245 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+}
+
+body{
+
+background:#af0101;
+
+display:flex;
+justify-content:center;
+
+min-height:100vh;
+
+}
+
+/* main container */
+
+.container{
+
+width:92%;
+max-width:520px;
+min-height:100vh;
+
+position:relative;
+
+padding:40px 28px;
+
+color:white;
+background-color: #db0101;
+overflow:hidden;
+}
+
+/* logo */
+
+.logo{
+
+width:160px;
+height:160px;
+border:2px solid rgba(255,255,255,0.6);
+border-radius:50%;
+margin:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter: blur(10px);
+
+overflow:hidden;
+
+}
+
+.logo img{
+width:100%;
+height:100%;
+object-fit:contain;
+}
+
+
+/* title */
+
+.title{
+
+margin-top:50px;
+
+}
+
+.title h1{
+
+font-size:48px;
+font-weight:900;
+
+line-height:52px;
+
+}
+
+.title p{
+
+margin-top:12px;
+font-size:15px;
+
+opacity:0.8;
+
+}
+
+
+/* glass cards */
+
+.card{
+position:absolute;
+width:230px;
+padding:20px;
+background:rgba(255,255,255,0.15);
+backdrop-filter: blur(14px);
+border:1px solid rgba(255,255,255,0.3);
+border-radius:18px;
+box-shadow:0 8px 32px rgba(0,0,0,0.25);
+z-index: 5;
+}
+
+.card h3{
+
+font-size:18px;
+margin-bottom:6px;
+
+}
+
+.card p{
+font-size:13px;
+line-height:18px;
+}
+
+
+/* card positions */
+
+.earth{
+top:420px;
+left:60px;
+}
+
+.shoyu{
+top:620px;
+right:60px;
+}
+
+
+/* ramen images */
+
+.ramen{
+
+position:absolute;
+
+width:260px;
+height:220px;
+
+display:flex;
+justify-content:center;
+align-items:flex-end;
+
+}
+
+/* ramen image */
+
+.ramen img{
+
+width: 350px;
+z-index:2;
+
+}
+
+.patch{
+
+position:absolute;
+
+bottom:0px;
+
+width:300px;
+height:140px;
+
+background:white;
+
+border-radius: 0% 45% 45% 45%;
+
+z-index:1;
+}
+
+.patch::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-12px;
+left:50%;
+
+transform:translateX(-50%);
+
+width:180px;
+height:30px;
+
+background:rgba(0,0,0,0.35);
+
+border-radius:50%;
+
+filter:blur(10px);
+
+}
+
+.patch2{
+bottom: 50px;
+}
+
+.ramen1{
+
+top:380px;
+right:-30px;
+transform: scaleX(-1);/* Flip the image horizontally */
+}
+
+.ramen2{
+top:620px;
+left:-20px;;
+}
+
+.ramen2 img{
+    width: 450px;
+}
+
+/* price badges */
+
+.price{
+
+position:absolute;
+background:#8b0000;
+padding:8px 20px;
+border-radius:12px;
+font-weight:700;
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+z-index: 5;
+
+}
+
+.price1{
+
+top:540px;
+right:50px;
+
+}
+
+.price2{
+
+top:750px;
+left:140px;
+
+}
+
+
+.new{
+    height: 600vh;
+    background: aliceblue;
+}
