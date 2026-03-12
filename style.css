@@ -1,245 +1,1000 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:"Poppins",sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
+    background: #af0101;
 
-background:#af0101;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-display:flex;
-justify-content:center;
-
-min-height:100vh;
-
+    min-height: 100vh;
 }
 
 /* main container */
 
-.container{
+.container {
+    width: 92%;
+    max-width: 520px;
+    min-height: 88vh;
 
-width:92%;
-max-width:520px;
-min-height:100vh;
+    position: relative;
 
-position:relative;
+    padding: 40px 28px;
 
-padding:40px 28px;
-
-color:white;
-background-color: #db0101;
-overflow:hidden;
+    color: white;
+    background-color: #db0101;
+    overflow: hidden;
 }
 
 /* logo */
 
-.logo{
+.logo {
+    width: 160px;
+    height: 160px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-width:160px;
-height:160px;
-border:2px solid rgba(255,255,255,0.6);
-border-radius:50%;
-margin:auto;
-display:flex;
-justify-content:center;
-align-items:center;
+    background: rgba(255, 255, 255, 0.08);
 
-background:rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
 
-backdrop-filter: blur(10px);
-
-overflow:hidden;
-
+    overflow: hidden;
 }
 
-.logo img{
-width:100%;
-height:100%;
-object-fit:contain;
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
-
 
 /* title */
 
-.title{
-
-margin-top:50px;
-
+.title {
+    margin-top: 50px;
 }
 
-.title h1{
+.title h1 {
+    font-size: 48px;
+    font-weight: 900;
 
-font-size:48px;
-font-weight:900;
-
-line-height:52px;
-
+    line-height: 52px;
 }
 
-.title p{
+.title p {
+    margin-top: 12px;
+    font-size: 15px;
 
-margin-top:12px;
-font-size:15px;
-
-opacity:0.8;
-
+    opacity: 0.8;
 }
-
 
 /* glass cards */
 
-.card{
-position:absolute;
-width:230px;
-padding:20px;
-background:rgba(255,255,255,0.15);
-backdrop-filter: blur(14px);
-border:1px solid rgba(255,255,255,0.3);
-border-radius:18px;
-box-shadow:0 8px 32px rgba(0,0,0,0.25);
-z-index: 5;
+.card {
+    position: absolute;
+    width: 230px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    z-index: 5;
 }
 
-.card h3{
-
-font-size:18px;
-margin-bottom:6px;
-
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
 }
 
-.card p{
-font-size:13px;
-line-height:18px;
+.card p {
+    font-size: 13px;
+    line-height: 18px;
 }
-
 
 /* card positions */
 
-.earth{
-top:420px;
-left:60px;
+.earth {
+    top: 420px;
+    left: 60px;
 }
 
-.shoyu{
-top:620px;
-right:60px;
+.shoyu {
+    top: 620px;
+    right: 60px;
 }
-
 
 /* ramen images */
 
-.ramen{
+.ramen {
+    position: absolute;
 
-position:absolute;
+    width: 260px;
+    height: 220px;
 
-width:260px;
-height:220px;
-
-display:flex;
-justify-content:center;
-align-items:flex-end;
-
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 /* ramen image */
 
-.ramen img{
-
-width: 350px;
-z-index:2;
-
+.ramen img {
+    width: 350px;
+    z-index: 2;
 }
 
-.patch{
+.patch {
+    position: absolute;
 
-position:absolute;
+    bottom: 0px;
 
-bottom:0px;
+    width: 300px;
+    height: 140px;
 
-width:300px;
-height:140px;
+    background: white;
 
-background:white;
+    border-radius: 0% 45% 45% 45%;
 
-border-radius: 0% 45% 45% 45%;
-
-z-index:1;
+    z-index: 1;
 }
 
-.patch::after{
+.patch::after {
+    content: "";
 
-content:"";
+    position: absolute;
 
-position:absolute;
+    bottom: -12px;
+    left: 50%;
 
-bottom:-12px;
-left:50%;
+    transform: translateX(-50%);
 
-transform:translateX(-50%);
+    width: 180px;
+    height: 30px;
 
-width:180px;
-height:30px;
+    background: rgba(0, 0, 0, 0.35);
 
-background:rgba(0,0,0,0.35);
+    border-radius: 50%;
 
-border-radius:50%;
-
-filter:blur(10px);
-
+    filter: blur(10px);
 }
 
-.patch2{
-bottom: 50px;
+.patch2 {
+    bottom: 50px;
 }
 
-.ramen1{
-
-top:380px;
-right:-30px;
-transform: scaleX(-1);/* Flip the image horizontally */
+.ramen1 {
+    top: 380px;
+    right: -30px;
+    transform: scaleX(-1);
+    /* Flip the image horizontally */
 }
 
-.ramen2{
-top:620px;
-left:-20px;;
+.ramen2 {
+    top: 620px;
+    left: -20px;
 }
 
-.ramen2 img{
+.ramen2 img {
     width: 450px;
 }
 
 /* price badges */
 
-.price{
+.price {
+    position: absolute;
+    background: #8b0000;
+    padding: 8px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+}
+
+.price1 {
+    top: 540px;
+    right: 50px;
+}
+
+.price2 {
+    top: 750px;
+    left: 140px;
+}
+
+/* Ramen Bowls Menu Section */
+.ramen-menu {
+    position: relative;
+    width: 92%;
+    max-width: 520px;
+    background-color: #F2C94C;
+    /* Warm yellow tone */
+    /* Decorative Japanese pattern background */
+    background-image: url('/utils/ramenbackground.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 15px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.menu-title {
+    font-family: 'Fredoka One', cursive, sans-serif;
+    font-size: 46px;
+    font-weight: 400;
+    color: #ff8c00;
+    -webkit-text-stroke: 2px white;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+}
+
+.menu-track {
+    position: relative;
+    padding: 20px 0 60px 0;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Vertical Katana Sword */
+.katana-sword {
+    position: absolute;
+    top: 0;
+    bottom: -50px;
+    /* pull down slightly */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    z-index: 1;
+    background-image: url('/utils/sasukeGrasscutter.png');
+    background-size: 100% 100%;
+    /* Stretch completely vertically */
+    background-position: top center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(4px 0px 6px rgba(0, 0, 0, 0.4));
+}
+
+.menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    width: 100%;
+    min-height: 140px;
+}
+
+.menu-item.left {
+    justify-content: flex-start;
+}
+
+.menu-item.right {
+    justify-content: flex-end;
+}
+
+.bowl-wrapper {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 0px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.bowl-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+/* Glassmorphism Cards */
+.menu-card {
+    background: rgba(250, 215, 120, 0.85);
+    /* semi-transparent golden yellow */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 82%;
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+
+.menu-item.left .menu-card {
+    margin-left: 0;
+    margin-right: auto;
+    padding-right: 80px;
+    /* space for bowl overlap */
+    text-align: left;
+}
+
+.menu-item.right .menu-card {
+    margin-left: auto;
+    margin-right: 0;
+    padding-left: 80px;
+    /* space for bowl overlap */
+    text-align: left;
+}
+
+.menu-card h3 {
+    font-family: 'Bungee', sans-serif;
+    color: #000;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+}
+
+.menu-card p {
+    color: #111;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 520px) {
+    .ramen-menu {
+        padding: 40px 10px;
+    }
+
+    .bowl-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .menu-card {
+        padding: 15px;
+        width: 85%;
+    }
+
+    .menu-item.left .menu-card {
+        padding-right: 65px;
+    }
+
+    .menu-item.right .menu-card {
+        padding-left: 65px;
+    }
+
+    .menu-card h3 {
+        font-size: 11px;
+    }
+
+    .menu-card p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .menu-title {
+        font-size: 32px;
+    }
+
+    .bowl-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .menu-card {
+        padding: 12px;
+        width: 88%;
+    }
+
+    .menu-item.left .menu-card {
+        padding-right: 55px;
+    }
+
+    .menu-item.right .menu-card {
+        padding-left: 55px;
+    }
+
+    .menu-card h3 {
+        font-size: 10px;
+        line-height: 12px;
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 520px) {
+    .container {
+        width:100%;
+        max-width:none;
+        padding: 20px 15px;
+    }
+
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .title {
+        margin-top: 30px;
+    }
+
+    .title h1 {
+        font-size: 38px;
+        line-height: 44px;
+    }
+
+    .card {
+        width: 190px;
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .earth {
+        top: 340px;
+        left: 20px;
+    }
+
+    .shoyu {
+        top: 540px;
+        right: 20px;
+    }
+
+    .ramen img {
+        width: 280px;
+    }
+
+    .patch {
+        width: 220px;
+        height: 100px;
+    }
+
+    .patch2 {
+        bottom: 40px;
+    }
+
+    .ramen1 {
+        top: 320px;
+        right: -20px;
+    }
+
+    .ramen2 {
+        top: 540px;
+        left: -10px;
+    }
+
+    .ramen2 img {
+        width: 360px;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        padding: 15px 10px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .title h1 {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .title p {
+        font-size: 13px;
+    }
+
+    .card {
+        width: 160px;
+        padding: 12px;
+    }
+
+    .card h3 {
+        font-size: 15px;
+    }
+
+    .card p {
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .earth {
+        top: 280px;
+        left: 10px;
+    }
+
+    .shoyu {
+        top: 460px;
+        right: 10px;
+    }
+
+    .ramen {
+        width: 180px;
+        height: 160px;
+    }
+
+    .ramen img {
+        width: 220px;
+    }
+
+    .patch {
+        width: 180px;
+        height: 80px;
+    }
+
+    .patch2 {
+        bottom: 30px;
+    }
+
+    .ramen1 {
+        top: 250px;
+        right: -10px;
+    }
+
+    .ramen2 {
+        top: 450px;
+        left: -10px;
+    }
+
+    .ramen2 img {
+        width: 280px;
+    }
+}
+
+
+.ramen-menu{
+    position: relative;
+    width: 100%;
+    min-height: 120vh;
+    background: url("./utils/ramenbackground.jpg");
+    background-size: cover;
+    padding: 100px 0;
+    font-family: sans-serif;
+}
+
+.menu-title{
+    text-align: center;
+    font-size: 48px;
+    color: #ff7a00;
+    letter-spacing: 3px;
+    margin-bottom: 60px;
+}
+
+/* sword */
+
+.sword{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 1110px;
+    top: 130px;
+    z-index: 1;
+}
+
+/* bowl */
+
+.bowl{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+/* ramen item container */
+/* ramen item container */
+
+.ramen-item{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* bowl */
+
+.bowl{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+/* WIDER GLASS CARD FOR MENU */
+
+.menu-card {
+
+    position: relative;
+
+    width: 220px;        /* wider than previous card */
+    min-height: 120px;
+
+    padding: 22px;
+
+    background: linear-gradient(
+        140deg,
+        rgba(255, 255, 255, 0.236),
+        rgba(255,255,255,0.15)
+    );
+
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.25),
+        inset 0 1px 1px rgba(255,255,255,0.7),
+        inset 0 -2px 10px rgba(255,255,255,0.2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    z-index: 5;
+}
+
+/* glass reflection */
+
+.menu-card::before{
+    content:"";
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:38%;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.232),
+        rgba(255,255,255,0)
+    );
+
+    border-radius:14px 14px 0 0;
+    pointer-events:none;
+}
+
+/* text */
+
+.menu-card h3{
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.menu-card p{
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* left side items */
+
+.left{
+    left: 12%;
+    flex-direction: row;
+}
+
+/* right side items */
+
+.right{
+    right: 12%;
+    flex-direction: row-reverse;
+}
+
+/* vertical spacing */
+
+.item1{ top: 260px; }
+.item2{ top: 420px; }
+.item3{ top: 600px; }
+.item4{ top: 780px; }
+
+
+
+/* ================= MOBILE RAMEN MENU ================= */
+
+@media (max-width:520px){
+
+.ramen-menu{
+    min-height: 150vh;
+    padding: 80px 0;
+    overflow-x: hidden;
+}
+
+.ramen-item{
+    gap: 12px;
+}
+
+/* bowls */
+
+.bowl{
+    width:130px;
+    height:130px;
+}
+
+/* menu cards */
+
+.menu-card{
+    width:auto; /* ensures full visibility */
+    margin: 5px;
+    padding:16px;
+}
+
+/* move cards toward center */
+
+.left{
+    left:12%;
+}
+
+.right{
+    right:12%;
+}
+
+/* vertical spacing */
+
+.item1{ top:220px; }
+.item2{ top:420px; }
+.item3{ top:620px; }
+.item4{ top:820px; }
+
+/* sword scaling */
+
+.sword{
+    width:380px;
+    height:1000px;
+    top:120px;
+}
+
+/* text */
+
+.menu-card h3{
+    font-size:13px;
+}
+
+.menu-card p{
+    font-size:11px;
+    line-height:1.35;
+}
+
+}
+
+/* ================= CHEF TOP 3 ================= */
+:root{
+--tilt-right: -6deg;
+--tilt-left: 6deg;
+}
+
+.chef-top{
+width:100%;
+max-width:520px;
+overflow:hidden;
+}
+
+/* TITLE */
+
+.chef-top-title{
+background:rgb(21, 18, 18);
+color:#c90000;
+
+height:180px;
+
+font-size:36px;
+font-weight:900;
+
+text-align:center;
+
+margin-top: -30px;
+margin-bottom: 20px;
+
+padding:26px;
+letter-spacing:4px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* ROW BASE */
+
+.chef-row{
+
+position:relative;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+margin-top:-55px;
+
+padding:90px 30px;
+
+overflow:visible;
+/* filter: brightness(0.8); */
+}
+
+/* alternating tilt */
+
+.row1{
+background:
+linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+url("/utils/anya.jpg");
+
+background-size:cover;
+background-position:center;
+
+transform:skewY(var(--tilt-right));
+}
+
+.row2{
+background:
+linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+url("/utils/Luffy.jpg");
+
+background-size:cover;
+background-position:center;
+transform:skewY(var(--tilt-left));
+flex-direction:row-reverse;
+}
+
+.row3{
+background:
+linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.30)),
+url("/utils/sukuna.jpg");
+
+background-size:cover;
+background-position:center;
+transform:skewY(var(--tilt-right));
+}
+
+/* fix inner skew */
+
+.row1 > *{
+transform:skewY(var(--tilt-left));
+}
+
+.row2 > *{
+transform:skewY(var(--tilt-right));
+}
+
+.row3 > *{
+transform:skewY(var(--tilt-left));
+}
+
+/* ================= FOOD ================= */
+
+.chef-food{
 
 position:absolute;
-background:#8b0000;
-padding:8px 20px;
-border-radius:12px;
+
+width:280px;
+height:280px;
+
+object-fit:contain;
+
+top:50px;
+
+filter:drop-shadow(0 18px 25px rgba(0,0,0,0.45));
+}
+
+/* image positions */
+
+.row1 .chef-food{
+right:-40px;
+width:220px;
+height:220px;
+}
+
+.row2 .chef-food{
+left:-30px;
+}
+
+.row3 .chef-food{
+right:-30px;
+}
+
+/* ================= TEXT ================= */
+
+.chef-info{
+max-width:220px;
+color:white;
+z-index:2;
+}
+
+.chef-info h3{
+font-size:20px;
+margin-bottom:8px;
+}
+
+.chef-info p{
+font-size:13px;
+line-height:1.4;
+opacity:.9;
+}
+
+.chef-price{
+display:inline-block;
+margin-top:10px;
+font-size:22px;
 font-weight:700;
-box-shadow:0 6px 15px rgba(0,0,0,0.3);
-z-index: 5;
-
 }
 
-.price1{
+/* ================= MOBILE ================= */
 
-top:540px;
-right:50px;
+@media (max-width:520px){
 
+.chef-row{
+padding:80px 20px;
 }
 
-.price2{
-
-top:750px;
-left:140px;
-
+.chef-food{
+width:200px;
+height:200px;
 }
 
+.row1 .chef-food{
+right:-20px;
+width:170px;
+height:170px;
+top:80px;
+}
 
-.new{
-    height: 600vh;
-    background: aliceblue;
+.row2 .chef-food{
+left:-25px;
+top:50px;
+}
+
+.row3 .chef-food{
+right:-20px;
+top:80px;
+}
+
+.chef-info{
+max-width:170px;
+}
+
+.chef-info h3{
+font-size:16px;
+}
+
+.chef-info p{
+font-size:11px;
+}
+
+.chef-price{
+font-size:18px;
+}
+
 }
